@@ -96,26 +96,26 @@
     
     NSAttributedString *hourAttrStr = [[NSAttributedString alloc] initWithString:hourStr attributes:
                                        @{NSFontAttributeName:self.letterFont,
-                                         NSBackgroundColorAttributeName:[UIColor darkGrayColor],
-                                         NSForegroundColorAttributeName:[UIColor whiteColor],
+                                         NSBackgroundColorAttributeName:self.letterbackColor,
+                                         NSForegroundColorAttributeName:self.letterColor,
                                          NSParagraphStyleAttributeName:numberStyle}];
     
     NSAttributedString *minuteAttrStr = [[NSAttributedString alloc] initWithString:minuteStr attributes:
                                        @{NSFontAttributeName:self.letterFont,
-                                         NSBackgroundColorAttributeName:[UIColor darkGrayColor],
-                                         NSForegroundColorAttributeName:[UIColor whiteColor],
+                                         NSBackgroundColorAttributeName:self.letterbackColor,
+                                         NSForegroundColorAttributeName:self.letterColor,
                                          NSParagraphStyleAttributeName:numberStyle}];
     
     NSAttributedString *secondAttrStr = [[NSAttributedString alloc] initWithString:secondStr attributes:
                                        @{NSFontAttributeName:self.letterFont,
-                                         NSBackgroundColorAttributeName:[UIColor darkGrayColor],
-                                         NSForegroundColorAttributeName:[UIColor whiteColor],
+                                         NSBackgroundColorAttributeName:self.letterbackColor,
+                                         NSForegroundColorAttributeName:self.letterColor,
                                          NSParagraphStyleAttributeName:numberStyle}];
     
     NSAttributedString *colonAttrStr = [[NSAttributedString alloc] initWithString:@":" attributes:
                                         @{NSFontAttributeName:self.letterFont,
                                           NSBackgroundColorAttributeName:[UIColor clearColor],
-                                          NSForegroundColorAttributeName:[UIColor blackColor],
+                                          NSForegroundColorAttributeName:self.colonColor,
                                           NSParagraphStyleAttributeName:numberStyle}];
     
     NSAttributedString *innerSpaceAttrStr = [[NSAttributedString alloc] initWithString:@" " attributes:
