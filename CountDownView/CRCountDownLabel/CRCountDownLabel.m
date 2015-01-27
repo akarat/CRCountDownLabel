@@ -53,6 +53,11 @@
 }
 
 - (void)createTimer{
+    if (self.timer != nil) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    
     self.timer = [[NSTimer alloc] initWithFireDate:[NSDate date]
                                           interval:1.0
                                             target:self
@@ -120,8 +125,8 @@
     
     NSAttributedString *innerSpaceAttrStr = [[NSAttributedString alloc] initWithString:@" " attributes:
                                              @{NSFontAttributeName:[UIFont systemFontOfSize:self.letterFont.pointSize*self.innerSpaceRatio],
-                                               NSBackgroundColorAttributeName:[UIColor darkGrayColor],
-                                               NSForegroundColorAttributeName:[UIColor whiteColor],
+                                               NSBackgroundColorAttributeName:self.letterbackColor,
+                                               NSForegroundColorAttributeName:[UIColor clearColor],
                                                NSParagraphStyleAttributeName:numberStyle}];
     
     NSAttributedString *spaceAttrStr = [[NSAttributedString alloc] initWithString:@" " attributes:
